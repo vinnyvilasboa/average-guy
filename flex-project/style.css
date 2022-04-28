@@ -15,7 +15,7 @@ body {
     color: #333;
     /* background: linear-gradient(#1ecbe1, rgb(207, 207, 207)); */
 
-    background: rgb(236, 236, 236);
+    background-color: #335689;
 }
 
 
@@ -110,6 +110,16 @@ ul {
     align-items: center;
     justify-content: space-between;
 }
+
+.head-title{
+    flex-direction: column;
+}
+
+.head-title p {
+    flex: 1;
+    padding: 10px 20px 0 0;
+    font-size: 1.2rem;
+}
 /**************************/
 /**********SECTION-BOX****************/
 
@@ -117,6 +127,7 @@ ul {
 .boxes .container {
     display: flex;
     justify-content: space-between;
+    background-color: #335689;
 }
 
 .box {
@@ -128,6 +139,9 @@ ul {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
     padding: 15px 20px;
 
+}
+.box:hover {
+    background: linear-gradient( #36cbdf, #4572b6);
 }
 
 .box i {
@@ -146,5 +160,12 @@ ul {
     .boxes .container {
         display: block;
         text-align: center;
+    }
+
+   .navbar .logo {
+        font-size: 1rem;
+    }
+    .navbar a {
+        font-size: .8rem;
     }
 }
