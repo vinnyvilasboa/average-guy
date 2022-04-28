@@ -53,7 +53,7 @@ ul {
 }
 
 .navbar:hover {
-    background: linear-gradient(0.25turn, #36cbdf, #94ccd3, #335689);
+    background: linear-gradient(0.25turn, #36cbdf,#335689, #335689);
 }
 
 .navbar .logo {
@@ -87,3 +87,64 @@ ul {
 }
 
 /**************************/
+/**********SECTION-HEADER****************/
+
+.header {
+    background-color: #335689;
+    color: #fff;
+    min-height: 40vh;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.header img {
+    max-width: 50vh;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/**************************/
+/**********SECTION-BOX****************/
+
+
+.boxes .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box {
+    flex: 1;
+    background: #36cbdf;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+    padding: 15px 20px;
+
+}
+
+.box i {
+    margin-right: 10px;
+    color: #335689;
+}
+
+
+@media(max-width:768px){
+    .header .container {
+        flex-direction: column;
+        padding: 20px;
+        text-align:center;
+    }
+
+    .boxes .container {
+        display: block;
+        text-align: center;
+    }
+}
