@@ -1,3 +1,3 @@
 # Initial WireFrame
 
-![WIREFRAME](initial-average-guy-tool.png)
+![WIREFRAME](assets/initial-average-guy-tool.png)
