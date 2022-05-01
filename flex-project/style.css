@@ -92,6 +92,7 @@ ul {
 /**************************/
 /**********SECTION-HEADER****************/
 
+
 .header {
     background-color: #335689;
     color: #fff;
@@ -112,8 +113,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    min-height: 20vh;
-    max-width: 50vh;
+    min-height: 10vh;
+    min-width: 40vw;
     background: #36cbdf;
     color: #fff;
     border-radius: 10px;
@@ -129,16 +130,23 @@ ul {
 
 .header .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
 .head-title{
+    display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 50vw;
+    min-height: 30vh;
+
 }
 
 .head-title p {
-    flex: 1;
+    /* flex: 1; */
     padding: 10px 20px 0 0;
     font-size: 1.2rem;
 }
@@ -173,17 +181,39 @@ ul {
     color: #335689;
 }
 
-
-button {
-    margin: 0.5em;
-    padding: 10px;
-    height: 3rem;
-    width: 3rem;
-    background: #fff;
-    color: #335689;
-    cursor: pointer;
-
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
   }
+
+.search-bar {
+    width: 100%;
+    border: 3px solid #898282cc;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    color: #9DBFAF;
+    height: 5vh;
+  }
+  
+  .search-bar:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background:  #9DBFAF;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
 
 /**************************/
 /**********MEDIA QUERIES****************/

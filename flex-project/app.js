@@ -1,3 +1,4 @@
+///////////////WEATHER OBJECT API//////////////////
 let weather = {
     apiKey: "772a5938a64f5d0f8aa3e42401341db0",
     fetchWeather: function (city) {
@@ -23,6 +24,12 @@ let weather = {
         this.fetchWeather(document.querySelector(".search-bar").value);
     }
 }
+
+//declare joke variable = object
+//apikey: "string",
+//fetchJoke: function() {
+//fetch("link")
+//test to see if you get return on it
 
 
 ////this button below will have to have all apis passed into it. 
