@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title> Average Guy Tool </title>
 </head>
@@ -21,24 +17,23 @@
             <div class="logo">AGT</div>
             <ul class="nav">
                 <!-- <li><a href="#">About</a></li> -->
-                
+
             </ul>
         </div>
     </nav>
     <header class="header">
         <div class="container">
             <div class="head-title">
-            <h1>Average Guy Tool</h1>
-            <p><strong>AGT</strong> is so that you leave your house well prepared to tell a corny joke, small talk about the weather, and seem smart in a topic that you know virtually nothing about.</p>
+                <h1>Average Guy Tool</h1>
+                <p><strong>AGT</strong> is so that you leave your house well prepared to tell a corny joke, small talk
+                    about the weather, and seem smart in a topic that you know virtually nothing about.</p>
             </div>
             <div class="input-field">
                 <form>
                     <label for="name">What's your location:</label>
-                    <input type="button" value="Click me" onclick="alert('You clicked the button!')">
-                   </form>
-            
-                <!-- <input type="text" id="city" name="name" required
-                       minlength="1" maxlength="20" size="30"> -->
+                    <!-- <input type="button" value="Click me" onclick="alert('You clicked the button!')"> -->
+                </form>
+                <input type="text" id="city" name="name" required minlength="1" maxlength="20" size="30">
             </div>
         </div>
     </header>
@@ -46,26 +41,35 @@
     <section class="boxes">
         <div class="container">
             <div class="box">
-                <h2><i class="fas fa-arrows-alt-v"></i> Joke</h2>
+                <h2><i class="far fa-smile-wink"></i> Joke</h2>
                 <p>
                     Dad joke to get you right.
                 </p>
             </div>
 
             <div class="box">
-                <h2><i class="fas fa-arrows-alt"></i>Weather</h2>
-                <p>
-                    This is where the weather would go based on current location.
-                </p>
+                <h2><i class="fas fa-globe-americas"></i>Weather</h2>
+                <div class="temperature">
+                    <div class="temp-section">
+                        <h3 class="temp-city">Your City</h3>
+                        <h3 class="temp-degree">0<span>°</span><span>F</span></h3>
+                    </div>
+                    <div class="temp-description">Find out
+                    </div>
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon">
+
+                </div>
+
             </div>
 
             <div class="box">
-                <h2><i class="fas fa-mobile"></i>Random Fact</h2>
+                <h2><i class="fas fa-info-circle"></i>Random Fact</h2>
                 <p>
                     This is to help you seem smarter.
                 </p>
             </div>
-        </div>
     </section>
+    <script src="app.js"></script>
 </body>
+
 </html>

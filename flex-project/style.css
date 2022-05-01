@@ -19,9 +19,11 @@ body {
 }
 
 
-/* img {
+img {
     max-width: 100%;
-} */
+    min-height: 8vh;
+    padding:0;
+}
 
 
 h1 h2 {
@@ -107,7 +109,9 @@ ul {
 }
 
 .input-field{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     min-height: 20vh;
     max-width: 50vh;
     background: #36cbdf;
