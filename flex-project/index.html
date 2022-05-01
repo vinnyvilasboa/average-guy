@@ -29,11 +29,11 @@
                     about the weather, and seem smart in a topic that you know virtually nothing about.</p>
             </div>
             <div class="input-field">
-                <form>
-                    <label for="name">What's your location:</label>
-                    <!-- <input type="button" value="Click me" onclick="alert('You clicked the button!')"> -->
-                </form>
-                <input type="text" id="city" name="name" required minlength="1" maxlength="20" size="30">
+                <div class="search">
+                    <h5 class="search-title">Add your current location and hit the button</h5>
+                    <input type="text" class="search-bar" placeholder="Your Location...">
+                    <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.442 10.442a1 1 0 011.415 0l3.85 3.85a1 1 0 01-1.414 1.415l-3.85-3.85a1 1 0 010-1.415z" clip-rule="evenodd"></path><path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 100-11 5.5 5.5 0 000 11zM13 6.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" clip-rule="evenodd"></path></svg></button>
+                </div>
             </div>
         </div>
     </header>
@@ -69,7 +69,7 @@
                 </p>
             </div>
     </section>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
