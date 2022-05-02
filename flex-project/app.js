@@ -48,18 +48,22 @@ jokeBtn.addEventListener("click", handleClick)
 
 //////////////////////////////QUOTE SECTION//////////////////////////////////
 const quotesBtn = document.querySelector(".quotes-btn");
-const quotesSection = document.querySelector(".quotes-section");
+const text = document.querySelector(".quote");
+const author = document.querySelector(".author");
 
-// async function fetchQuotes () {
-//     const response = await fetch("https://type.fit/api/quotes", { 
-//         headers: {
-//             Accept: "application/json",
-//         },
-//     })
-//     const data = await response.json()
-//     return data;
-
-// }
+const fetchQuote = async () => {
+    const res = await fetch("https://type.fit/api/quotes");
+    const quotes = await res.json();
+    const num = Math.floor(Math.random()*quotes.length);
+    console.log(num)
+    const item = quotes[num]
+    // console.log(item)
+    const quote = item.text;
+    const authorName = item.author;
+    text.innerText = '"' + quote + '"';
+    author.innerText = authorName;
+}
+fetchQuote()
 
 // fetch("https://type.fit/api/quotes")
 // .then(response=>response.json())
@@ -67,17 +71,18 @@ const quotesSection = document.querySelector(".quotes-section");
 //     var randomIndex = Math.floor(Math.random()*data.length);
 //     document.getElementById("set").innerHTML = data[randomIndex].text;
 // });
+
 //pull random quote from array 
-async function fetchQuotes () {
-await fetch("https://type.fit/api/quotes")
-  .then(response=> response.json())
-  .then(data => {
-      let randomQuote = Math.floor(Math.random()*data.length);
-      console.log(randomQuote)
-      document.querySelector(".quotes-section").innerHTML = data[randomQuote].text;
+// async function fetchQuotes () {
+// await fetch("https://type.fit/api/quotes")
+//   .then(response=> response.json())
+//   .then(data => {
+//       let randomQuote = Math.floor(Math.random()*data.length);
+//       console.log(randomQuote)
+//       document.querySelector(".quotes-section").innerHTML = data[randomQuote].text;
       
-  });
-}
+//   });
+// }
 // async function handleClick(){
 //     const {text} = await fetchQuotes();
 //     quotesSection.textContent = text[0];
@@ -86,24 +91,7 @@ await fetch("https://type.fit/api/quotes")
 
 // quotesBtn.addEventListener("click", handleClick)
 
-
-// fetchQuotes()
-
-// async function handleClick(){
-//     const {text, author} = await fetchQuotes();
-//     quotesSection.textContent = text[0];
-// }
-
-// quotesBtn.addEventListener("click", handleClick)
-
-
-
-// .then(function(response){
-//     return response.json();
-// })
-// .then(function(data){
-//     console.log(data);
-// })
+//https://www.javascripttutorial.net/javascript-fetch-api/
 
 
 //////////////////////////////MAIN BUTTON//////////////////////////////////
