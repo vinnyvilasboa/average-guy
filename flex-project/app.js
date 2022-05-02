@@ -30,33 +30,49 @@ let weather = {
 const jokeBtn = document.querySelector(".joke-btn")
 const jokeSection = document.querySelector(".joke-section")
 //declare joke variable = object
-async function fetchJoke(){
+async function fetchJoke() {
     const response = await fetch("https://icanhazdadjoke.com", {
-        headers: { 
+        headers: {
             Accept: "application/json",
         },
     });
-    
+
     const data = await response.json();
-    console.log(data)
+    return data
+
 }
-fetchJoke()
-//apikey: "string",
-//fetchJoke: function() {
-//fetch("link")
-//test to see if you get return on it
+
+async function handleClick(){
+    const {joke} = await fetchJoke();
+    jokeSection.textContent = joke;
+}
+
+jokeBtn.addEventListener("click", handleClick)
+
+
+// fetchJoke()
+
+//create handleClick function for
+// async function handleClick(){
+//     const {joke} = await fetchJoke();
+//     console.log(joke)
+// }
+
+// jokeBtn.addEventListener("click", handleClick)
+
+
 
 
 ////this button below will have to have all apis passed into it. 
 
 document.querySelector('.search button').addEventListener("click", function () {
-        weather.search();
-    })
+    weather.search();
+})
 
 document
     .querySelector(".search-bar")
-        .addEventListener("keyup", function (event) {
-            if (event.key == "Enter") {
-                weather.search();
-            }
-        });
+    .addEventListener("keyup", function (event) {
+        if (event.key == "Enter") {
+            weather.search();
+        }
+    });
