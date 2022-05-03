@@ -27,8 +27,27 @@ let weather = {
 //////////////////////////////JOKE SECTION//////////////////////////////////
 
 
+// const jokeBtn = document.querySelector(".joke-btn")
+// const jokeSection = document.querySelector(".joke-section")
+// async function fetchJoke() {
+//     const response = await fetch("https://icanhazdadjoke.com", {
+//         headers: {
+//             Accept: "application/json",
+//         },
+//     });
+//     const data = await response.json();
+//     return data
+// }
+// async function handleClick(){
+//     const {joke} = await fetchJoke();
+//     jokeSection.textContent = joke;
+// }
+
+// jokeBtn.addEventListener("click", handleClick)
+
 const jokeBtn = document.querySelector(".joke-btn")
 const jokeSection = document.querySelector(".joke-section")
+//how do i convert this to be able to populate on reload or on click for now?
 async function fetchJoke() {
     const response = await fetch("https://icanhazdadjoke.com", {
         headers: {
@@ -43,7 +62,7 @@ async function handleClick(){
     jokeSection.textContent = joke;
 }
 
-jokeBtn.addEventListener("click", handleClick)
+// jokeBtn.addEventListener("click", handleClick)
 
 
 //////////////////////////////QUOTE SECTION//////////////////////////////////
@@ -99,6 +118,10 @@ fetchQuote()
 document.querySelector('.search button').addEventListener("click", function () {
     weather.search();
 })
+document.querySelector('.search button').addEventListener("click", handleClick())
+// document.querySelector('.search button').addEventListener("click", function () {
+//     weather.search();
+// })
 
 document
     .querySelector(".search-bar")
